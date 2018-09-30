@@ -7,7 +7,8 @@ import java.util.List;
  * {@code AddressBook} that keeps track of its own history.
  */
 public class VersionedAddressBook extends AddressBook {
-
+    // note VersionedAddressBook also contains persons(UniquePersonList), just as its superclass
+    // it's a list of list of Persons
     private final List<ReadOnlyAddressBook> addressBookStateList;
     private int currentStatePointer;
 
