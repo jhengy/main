@@ -5,6 +5,7 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_DURATION;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_SECTION_TYPE;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_SUBHEADER;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAG;
+import static seedu.address.logic.parser.CliSyntax.PREFIX_TAGS;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TITLE;
 
 import seedu.address.logic.CommandHistory;
@@ -18,7 +19,7 @@ public class AddEntryCommand extends Command{
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds an entry to the resuMaker "
             + "Parameters: "
             + PREFIX_SECTION_TYPE + "SECTION TYPE "
-            + "[" + PREFIX_TAG + "TAG]..."
+            + "[" + PREFIX_TAGS + "TAG]..."
             + PREFIX_TITLE + "TITLE "
             + PREFIX_SUBHEADER + "SUBHEADER"
             + PREFIX_DURATION + "DURATION\n"
