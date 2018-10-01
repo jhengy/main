@@ -53,7 +53,7 @@ public class ModelManager extends ComponentManager implements Model {
 
     /** Raises an event to indicate the model has changed */
     private void indicateAddressBookChanged() {
-        raise(new AddressBookChangedEvent(versionedAddressBook));
+        raise(new AddressBookChangedEvent(versionedAddressBook)); // raising event via EventCenter, which will invoke the handleAddressBookChangedEvent method under StorageManager
     }
 
     @Override
