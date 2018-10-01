@@ -838,7 +838,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 |`* * *` |Student |Have my Work Experiences and Projects sorted by relevance to job requirements, on my resume |Ensure my resume is relevant to the employer
 
-|`* * *` |Student |Search for entries using filters | Check my saved entries conveniently
+|`* * *` |Student |Search for entries using filters |Check my saved entries conveniently
 
 |`* * *` |Student |Generate resumes in common file formats like PDF |My resumes are accepted by everyone
 
@@ -859,11 +859,11 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 |`*` |Student |Undo commands and revert any changes made |Quickly recover from making a typo
 
-|`*` |Student with multiple computers |Export my saved information and import it on another computer |Generate resumes wherever I go
+|`*` |Student with multiple computers |Export my saved information and import it on another computer |Generate resumes wherever I go 
 
 |`*` |Student |Undo commands and revert any changes made |Quickly recover from making a typo
 
-|`*` |Student |Conveniently contact people I have worked with in the past | Request testimonials or keep in touch for networking purposes
+|`*` |Student |Conveniently contact people I have worked with in the past |Request testimonials or keep in touch for networking purposes
 
 |`*` |Student |Easily learn how to use the tool from a built-in tutorial |Get started and work more efficiently
 
