@@ -777,7 +777,7 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 |`* *` |Student with existing work|Import my existing projects from Github |Save time typing them out manually
 
-|`*` |Student with multiple computers |Export my saved information and import it on another computer |Generate resumes wherever I go 
+|`*` |Student with multiple computers |Export my saved information and import it on another computer |Generate resumes wherever I go
 
 |`*` |Student |Undo commands and revert any changes made |Quickly recover from making a typo
 
