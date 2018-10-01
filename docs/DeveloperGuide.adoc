@@ -918,7 +918,7 @@ Use case ends.
 
 [discrete]
 
-=== Delete an Entry under a specific category 
+=== Delete an Entry under a specific category
 
 *MSS*
 
@@ -936,12 +936,12 @@ Use case ends.
 ** *a2. User re-enters the command
 * 3a. User inputs an index out of range
 ** 3a.1 System prompts for invalid input and asks user to re-enter the command
-** 3a.2 return to step 4 for the user to re-enter the command 
+** 3a.2 return to step 4 for the user to re-enter the command
 
 
 [discrete]
 
-=== edit an Entry under a specific index 
+=== edit an Entry under a specific index
 
 *MSS*
 
@@ -961,7 +961,7 @@ Use case ends.
 ** *a2. User re-enters the command
 * 3a. User inputs an index out of range
 ** 3a.1 System prompts for invalid input and asks user to re-enter the command
-** 3a.2 return to step 4 for the user to re-enter the command 
+** 3a.2 return to step 4 for the user to re-enter the command
 
 
 [discrete]
