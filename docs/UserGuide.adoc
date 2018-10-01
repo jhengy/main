@@ -59,7 +59,7 @@ Format: `help`
 === Adding an entry: `addEntry`
 
 Adds a person to the address book +
-Format: `AddEntry ~SECTION [#TAG]... t/TITLE [s/SUBHEADER] d/DURATION`
+Format: `addEntry ~SECTION [#TAG]... t/TITLE [s/SUBHEADER] d/DURATION`
 
 [TIP]
 An entry can have any number of tags (including 0)
@@ -72,7 +72,7 @@ Examples:
 
 === Adding a bullet point: `addDescription`
 
-Adds a bullet point under the description of an entry in the resuMaker +
+Adds a bullet point under the description of an entry in the ResuMaker +
 Format: `addBullet CONTENTTOADD`
 
 Examples:
