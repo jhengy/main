@@ -857,13 +857,9 @@ Priorities: High (must have) - `* * \*`, Medium (nice to have) - `* \*`, Low (un
 
 |`* *` |Student with existing work|Import my existing projects from Github |Save time typing them out manually
 
-|`*` |Student |Undo commands and revert any changes made |Quickly recover from making a typo
-
 |`*` |Student with multiple computers |Export my saved information and import it on another computer |Generate resumes wherever I go 
 
 |`*` |Student |Undo commands and revert any changes made |Quickly recover from making a typo
-
-|`*` |Student |Conveniently contact people I have worked with in the past |Request testimonials or keep in touch for networking purposes
 
 |`*` |Student |Easily learn how to use the tool from a built-in tutorial |Get started and work more efficiently
 
