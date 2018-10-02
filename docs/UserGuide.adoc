@@ -81,7 +81,7 @@ Examples:
 
 === Editing a bullet point: `editBullet`
 
-edits a bullet point under the description of an entry in the resuMaker +
+edits a bullet point under the description of an entry in the ResuMaker +
 Format: `editBullet INDEX EDITTEDCONTENT`
 
 Examples:
@@ -91,7 +91,7 @@ Examples:
 
 === Listing entries : `listEntry`
 
-list particular entries in the resuMaker. Both section and tags are optional - running with no arguments will display all entries. +
+list particular entries in the ResuMaker. Both section and tags are optional - running with no arguments will display all entries. +
 Format: `listEntry [~SECTION] [#TAG]...`
 
 
@@ -99,9 +99,9 @@ Examples:
 
 * `listEntry ~education java`
 
-=== Viewing a particular entry : `vieWEntry`
+=== Viewing a particular entry : `viewEntry`
 
-views a particular entry in the resuMaker.+
+views a particular entry in the ResuMaker.+
 Format: `vieWEntry INDEX`
 
 Examples:
@@ -110,7 +110,7 @@ Examples:
 
 === Editing an entry : `editEntry`
 
-Edits an existing entry in the resuMaker. +
+Edits an existing entry in the ResuMaker. +
 Format: `editEntry INDEX [t/TITLE ] [s/SUBHEADER] [d/DURATION] [t/TAG]...`
 
 ****
