@@ -93,7 +93,7 @@ public class MajorEntry extends Entry {
         builder.append(getSectionType())
                 .append(" title: ")
                 .append(getTitle())
-                .append(" subheader: ")
+                .append(" subHeader: ")
                 .append(getSubHeader())
                 .append(" duration: ")
                 .append(getDuration())
