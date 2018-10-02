@@ -70,23 +70,23 @@ Examples:
 * `addEntry ~experience #java t/The Source Enterprise s/Java Programmer intern d/ May 2010 - Aug 2010`
 * `addEntry ~awards #java`
 
-=== Adding a bullet point: `addDescription`
+=== Adding a bullet point: `addBullet`
 
 Adds a bullet point under the description of an entry in the ResuMaker +
 Format: `addBullet CONTENTTOADD`
 
 Examples:
 
-* `addBullet  research design and implement scalable java`
+* `addBullet implement scalable application for data visualization using java`
 
-=== editing a bullet point: `editDescription`
+=== editing a bullet point: `editBullet`
 
 edits a bullet point under the description of an entry in the resuMaker +
 Format: `editBullet INDEX EDITTEDCONTENT`
 
 Examples:
 
-* `editBullet 0  research design and implement scalable java application`
+* `editBullet 0  implement scalable application for data visualization using java`
 
 
 === Listing entries : `listEntry`
