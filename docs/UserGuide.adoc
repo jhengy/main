@@ -79,7 +79,7 @@ Examples:
 
 * `addBullet implement scalable application for data visualization using java`
 
-=== editing a bullet point: `editBullet`
+=== Editing a bullet point: `editBullet`
 
 edits a bullet point under the description of an entry in the resuMaker +
 Format: `editBullet INDEX EDITTEDCONTENT`
@@ -99,7 +99,7 @@ Examples:
 
 * `listEntry ~education java`
 
-=== viewing a particular entry : `vieWEntry`
+=== Viewing a particular entry : `vieWEntry`
 
 views a particular entry in the resuMaker.+
 Format: `vieWEntry INDEX`
@@ -128,7 +128,7 @@ edits the entry at index 1 by replacing its title as R company and replace all i
 
 
 
-=== deleting an entry: `deleteEntry`
+=== Deleting an entry: `deleteEntry`
 
 Finds persons whose names contain any of the given keywords. +
 Format: `deleteEntry INDEX`
