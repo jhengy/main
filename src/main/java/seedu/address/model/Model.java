@@ -1,8 +1,8 @@
 package seedu.address.model;
 
 import java.util.function.Predicate;
-
 import javafx.collections.ObservableList;
+import seedu.address.model.entry.MajorResumeEntry;
 import seedu.address.model.person.Person;
 
 /**
@@ -22,6 +22,13 @@ public interface Model {
      * Returns true if a person with the same identity as {@code person} exists in the address book.
      */
     boolean hasPerson(Person person);
+
+    /**
+     *
+     * @param entry to be searched
+     * @return true if an entry with the same identity as {@code entry} exists in the ResuMaker.
+     */
+    boolean hasEntry(MajorResumeEntry entry);
 
     /**
      * Deletes the given person.
