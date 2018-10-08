@@ -17,8 +17,8 @@ public class AddressTest {
     @Test
     public void constructor_invalidAddress_throwsIllegalArgumentException() {
         String invalidAddress = "";
-        Assert.assertThrows(IllegalArgumentException.class,
-                () -> new seedu.address.model.person.Address(invalidAddress));
+        Assert.assertThrows(IllegalArgumentException.class, ()
+            -> new seedu.address.model.person.Address(invalidAddress));
     }
 
     @Test
