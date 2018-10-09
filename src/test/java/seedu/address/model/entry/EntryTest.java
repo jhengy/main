@@ -29,6 +29,9 @@ public class EntryTest {
         assertTrue(NUS_EDUCATION.isSameEntry(NUS_EDUCATION));
         assertTrue(WORK_FACEBOOK.isSameEntry(WORK_FACEBOOK));
 
+        // different object but same fields
+        assertTrue(NUS_EDUCATION.isSameEntry(new EntryBuilder(NUS_EDUCATION).build()));
+
         // null -> returns false
         assertFalse(WORK_FACEBOOK.isSameEntry(null));
         assertFalse(NUS_EDUCATION.isSameEntry(null));
@@ -49,6 +52,9 @@ public class EntryTest {
         // same object -> returns true
         assertTrue(WORK_FACEBOOK.equals(WORK_FACEBOOK));
         assertTrue(NUS_EDUCATION.equals(NUS_EDUCATION));
+
+        // different object but same fields
+        assertTrue(NUS_EDUCATION.equals(new EntryBuilder(NUS_EDUCATION).build()));
 
         // null -> returns false
         assertFalse(WORK_FACEBOOK.equals(null));

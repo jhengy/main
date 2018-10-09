@@ -3,8 +3,6 @@ package seedu.address.model.entry;
 import java.util.ArrayList;
 import java.util.List;
 
-import seedu.address.commons.core.index.Index;
-
 /**
  *  Represents bullet points content for an entry.
  */
@@ -21,10 +19,6 @@ public class EntryDescription {
 
     public void addBullet(String bullet) {
         descriptionList.add(bullet);
-    }
-
-    public void editBullet(Index index, String editedMsg) {
-
     }
 
     @Override

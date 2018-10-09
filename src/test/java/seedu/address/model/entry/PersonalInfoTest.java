@@ -24,12 +24,24 @@ public class PersonalInfoTest {
     }
 
     @Test
-    public void equals() {
-
+    public void equalsAndToString() {
         PersonalInfo defaultInfo = createDefualt();
+
+        // same object
         assertTrue(defaultInfo.equals(defaultInfo));
+
+        // different object with same fields
         assertTrue(createDefualt().equals(createDefualt()));
+
+        // null object
         assertFalse(createDefualt().equals(null));
+
+        //ToString method
+        System.out.println(defaultInfo);
+        assertTrue(defaultInfo.toString()
+                .equals("Alice Pauline Phone: 85355255 Email: alice@gmail.com "
+                        + "Address: 123, Jurong West Ave 6, #08-111 Githubsource102"));
+
     }
 
 }

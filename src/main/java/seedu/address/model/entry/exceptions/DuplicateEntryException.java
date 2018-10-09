@@ -5,8 +5,9 @@ package seedu.address.model.entry.exceptions;
  * identity).
  */
 public class DuplicateEntryException extends RuntimeException {
-    public DuplicateEntryException() {
+    // to be implemented at later stage
+    /*public DuplicateEntryException() {
         super("Operation would result in duplicate Entries");
-    }
+    } */
 }
 
