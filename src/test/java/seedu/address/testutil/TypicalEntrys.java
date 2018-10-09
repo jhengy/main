@@ -23,10 +23,10 @@ public class TypicalEntrys {
             .withSubHeader("Bachelor of computing")
             .withTags("machinelearning").build();
 
-    /*public static final MajorResumeEntry NUS_EDUCATION_WITH_SPACED_TAG = new EntryBuilder().withCategory("education")
+    public static final MajorResumeEntry NUS_EDUCATION_WITH_SPACED_TAG = new EntryBuilder().withCategory("education")
             .withTitle("National University of Singapore").withDuration("2010 - 2013")
             .withSubHeader("Bachelor of computing")
-            .withTags("Machine Learning").build();*/
+            .withTags("Machine Learning").build();
 
 
 
