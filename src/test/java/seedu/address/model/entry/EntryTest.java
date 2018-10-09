@@ -2,13 +2,11 @@ package seedu.address.model.entry;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
-
 import static seedu.address.testutil.TypicalEntrys.NUS_EDUCATION;
 import static seedu.address.testutil.TypicalEntrys.WORK_FACEBOOK;
 
 import org.junit.Rule;
 import org.junit.Test;
-
 import org.junit.rules.ExpectedException;
 
 import seedu.address.testutil.EntryBuilder;
@@ -46,7 +44,7 @@ public class EntryTest {
     }
 
     @Test
-    public void equals() {
+    public void equalsAndToString() {
 
         // same object -> returns true
         assertTrue(WORK_FACEBOOK.equals(WORK_FACEBOOK));
@@ -64,5 +62,11 @@ public class EntryTest {
 
         // all fields different
         assertFalse(NUS_EDUCATION.equals(WORK_FACEBOOK));
+        System.out.println(WORK_FACEBOOK);
+        assertTrue(WORK_FACEBOOK.toString()
+                .equals("work Title: Facebook SubHeader: software engineering intern"
+                        + " Duration: 2010 - 2013 Tags: [java]"));
     }
+
+
 }
