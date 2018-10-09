@@ -19,7 +19,7 @@ public class TypicalEntrys {
             .withTags("java").build();
 
     public static final MajorResumeEntry NUS_EDUCATION = new EntryBuilder().withCategory("education")
-            .withTitle("National University of Singapore").withDuration("2010 - 2013")
+            .withTitle("National University of Singapore").withDuration("2010 - 2014")
             .withSubHeader("Bachelor of computing")
             .withTags("machinelearning").build();
 

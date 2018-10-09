@@ -1,5 +1,6 @@
 package seedu.address.model.entry;
 
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -24,7 +25,11 @@ public class PersonalInfoTest {
 
     @Test
     public void equals() {
+
+        PersonalInfo defaultInfo = createDefualt();
+        assertTrue(defaultInfo.equals(defaultInfo));
         assertTrue(createDefualt().equals(createDefualt()));
+        assertFalse(createDefualt().equals(null));
     }
 
 }

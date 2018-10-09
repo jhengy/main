@@ -24,7 +24,7 @@ public class EntryTest {
     }
 
     @Test
-    public void isSamePerson() {
+    public void isSameEntry() {
         // same object -> returns true
         assertTrue(NUS_EDUCATION.isSameEntry(NUS_EDUCATION));
         assertTrue(WORK_FACEBOOK.isSameEntry(WORK_FACEBOOK));
@@ -62,7 +62,8 @@ public class EntryTest {
 
         // all fields different
         assertFalse(NUS_EDUCATION.equals(WORK_FACEBOOK));
-        System.out.println(WORK_FACEBOOK);
+
+        // test toString()
         assertTrue(WORK_FACEBOOK.toString()
                 .equals("work Title: Facebook SubHeader: software engineering intern"
                         + " Duration: 2010 - 2013 Tags: [java]"));
