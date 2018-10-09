@@ -2,6 +2,7 @@ package seedu.address.testutil;
 
 import java.util.HashSet;
 import java.util.Set;
+
 import seedu.address.model.category.Category;
 import seedu.address.model.entry.EntryDescription;
 import seedu.address.model.entry.EntryInfo;
@@ -9,6 +10,9 @@ import seedu.address.model.entry.MajorResumeEntry;
 import seedu.address.model.tag.Tag;
 import seedu.address.model.util.SampleDataUtil;
 
+/**
+ * class to build an entry for test.
+ */
 public class EntryBuilder {
     public static final String DEFAULT_CAT = "EDUCATION";
     public static final String DEFAULT_TITLE = "THE SOURCE ACADEMY";
@@ -23,7 +27,7 @@ public class EntryBuilder {
 
     public EntryBuilder() {
         this.category = new Category(DEFAULT_CAT);
-        this.entryInfo = new EntryInfo(DEFAULT_TITLE, DEFUALT_SUBHEADER,DEFAULT_DURATION);
+        this.entryInfo = new EntryInfo(DEFAULT_TITLE, DEFUALT_SUBHEADER, DEFAULT_DURATION);
     }
 
     /**

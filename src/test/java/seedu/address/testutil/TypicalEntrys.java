@@ -2,14 +2,18 @@ package seedu.address.testutil;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import seedu.address.model.AddressBook;
 import seedu.address.model.entry.MajorResumeEntry;
 import seedu.address.model.person.Person;
 
+/**
+ * class containing default entries.
+ */
 public class TypicalEntrys {
 
     // manually added
-    public static final MajorResumeEntry WORK_AT_FACEBOOK = new EntryBuilder().withCategory("work")
+    public static final MajorResumeEntry WORK_FACEBOOK = new EntryBuilder().withCategory("work")
             .withTitle("Facebook").withDuration("2010 - 2013")
             .withSubHeader("software engineering intern")
             .withTags("java").build();
