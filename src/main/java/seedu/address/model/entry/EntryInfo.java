@@ -16,18 +16,31 @@ public class EntryInfo {
 
     private List<String> entryInfo = new LinkedList<String>();
 
+    /**
+     * @param title
+     * @param subheader
+     * @param duration
+     */
+    public EntryInfo(String title, String subheader, String duration) {
+        requireAllNonNull(title, subheader, duration);
+        entryInfo.add(title);
+        entryInfo.add(subheader);
+        entryInfo.add(duration);
+    }
+
     public EntryInfo(List<String> entryInfo) {
         requireAllNonNull(entryInfo);
         checkArgument(isValidEntryInfo(entryInfo), MESSAGE_ENTRYINFO_CONSTRAINTS);
         this.entryInfo.addAll(entryInfo);
     }
 
+
     /**
      * Returns true if a given list of strings contains title, subheader and
      * duration.
      */
     public static boolean isValidEntryInfo(List<String> entryInfo) {
-        return entryInfo.size() == 3;
+        return true;
     }
 
     public List<String> getEntryInfo() {
@@ -54,6 +67,19 @@ public class EntryInfo {
      */
     public String getDuration() {
         return entryInfo.get(2);
+    }
+
+
+    public void setTitle(String title) {
+        entryInfo.set(0, title);
+    }
+
+    public void setSubHeader(String subHeader) {
+        entryInfo.set(1, subHeader);
+    }
+
+    public void setDuration(String duration) {
+        entryInfo.set(2, duration);
     }
 
     @Override

@@ -2,11 +2,11 @@ package seedu.address.model.entry;
 
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
 import java.util.Set;
-
 import seedu.address.model.category.Category;
 import seedu.address.model.tag.Tag;
 
@@ -43,8 +43,12 @@ public class MajorResumeEntry implements Taggable {
         return entryInfo;
     }
 
+    /**
+     * Returns an immutable tag set, which throws {@code UnsupportedOperationException}
+     * if modification is attempted.
+     */
     public Set<Tag> getTags() {
-        return tags;
+        return Collections.unmodifiableSet(tags);
     }
 
     public EntryDescription getDescription() {

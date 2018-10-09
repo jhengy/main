@@ -19,8 +19,8 @@ public class EntryDescription {
         return descriptionList;
     }
 
-    public void addBullet() {
-
+    public void addBullet(String bullet) {
+        descriptionList.add(bullet);
     }
 
     public void editBullet(Index index, String editedMsg) {
