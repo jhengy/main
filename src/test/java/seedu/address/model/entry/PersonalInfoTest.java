@@ -11,11 +11,11 @@ public class PersonalInfoTest {
     public static final String DEFAULT_ADDRESS = "123, Jurong West Ave 6, #08-111";
     public static final String DEFAULT_GITHUB = "source102";
 
-    static PersonalInfo defaultInfo = new PersonalInfo(new Name(DEFAULT_NAME),
-            new Address(DEFAULT_ADDRESS), new Phone(DEFAULT_PHONE),
-            new Email(DEFAULT_EMAIL), DEFAULT_GITHUB);
     @Test
     public void equals() {
+        PersonalInfo defaultInfo = new PersonalInfo(new Name(DEFAULT_NAME),
+                new Address(DEFAULT_ADDRESS), new Phone(DEFAULT_PHONE),
+                new Email(DEFAULT_EMAIL), DEFAULT_GITHUB);
         assertTrue(defaultInfo.equals(defaultInfo));
     }
 
