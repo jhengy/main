@@ -35,4 +35,10 @@ public class AddressTest {
         assertTrue(seedu.address.model.person.Address.isValidAddress("-")); // one character
         assertTrue(Address.isValidAddress("Leng Inc; 1234 Market St; San Francisco CA 2349879; USA")); // long address
     }
+
+    @Test
+    public void equals() {
+        assertFalse(new Address("123, Jurong West Ave 6, #08-111").equals(
+                new Address("123, Jurong East Ave 6, #08-111")));
+    }
 }

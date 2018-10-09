@@ -37,4 +37,26 @@ public class PersonalInfo {
     public String getGithub() {
         return github;
     }
+
+    /**
+     * Returns true if both persons have the same identity and data fields.
+     * This defines a stronger notion of equality between two persons.
+     */
+    @Override
+    public boolean equals(Object other) {
+        if (other == this) {
+            return true;
+        }
+
+        if (!(other instanceof PersonalInfo)) {
+            return false;
+        }
+
+        PersonalInfo info = (PersonalInfo) other;
+        return info.getName().equals(getName())
+                && info.getPhone().equals(getPhone())
+                && info.getEmail().equals(getEmail())
+                && info.getAddress().equals(getAddress())
+                && info.getGithub().equals(getGithub());
+    }
 }
