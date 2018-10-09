@@ -110,7 +110,9 @@ public class AddCommandTest {
         }
 
         @Override
-        public boolean hasEntry(MajorResumeEntry entry) { throw new AssertionError("This method should not be called.");};
+        public boolean hasEntry(MajorResumeEntry entry) {
+            throw new AssertionError("This method should not be called.");
+        }
 
         @Override
         public void deletePerson(Person target) {
