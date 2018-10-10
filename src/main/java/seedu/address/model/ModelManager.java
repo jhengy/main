@@ -9,9 +9,11 @@ import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
+
 import seedu.address.commons.core.ComponentManager;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.commons.events.model.AddressBookChangedEvent;
+import seedu.address.model.entry.MajorResumeEntry;
 import seedu.address.model.person.Person;
 
 /**
@@ -60,6 +62,12 @@ public class ModelManager extends ComponentManager implements Model {
     public boolean hasPerson(Person person) {
         requireNonNull(person);
         return versionedAddressBook.hasPerson(person);
+    }
+
+    @Override
+    // to be modified
+    public boolean hasEntry(MajorResumeEntry entry) {
+        return false;
     }
 
     @Override
