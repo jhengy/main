@@ -28,6 +28,9 @@ public class TypicalEntrys {
             .withSubHeader("Bachelor of computing")
             .withTags("Machine Learning").build();
 
+    public static final ResumeEntry AWARD_WITH_NO_ENTRYINFO = new EntryBuilder()
+            .withCategory("Awards").buildMinorEntry();
+
 
 
 

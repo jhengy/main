@@ -10,6 +10,7 @@ import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import seedu.address.testutil.EntryBuilder;
+import seedu.address.testutil.TypicalEntrys;
 
 public class EntryTest {
 
@@ -69,10 +70,14 @@ public class EntryTest {
         // all fields different
         assertFalse(NUS_EDUCATION.equals(WORK_FACEBOOK));
 
-        // test toString()
+        // test toString() of a majorEntry
         assertTrue(WORK_FACEBOOK.toString()
                 .equals(" Category: work Title: Facebook SubHeader: software engineering intern"
                         + " Duration: 2010 - 2013 Tags: [java]"));
+
+        // test toString of a minorEntry which does not contain entryInfo
+        assertTrue(TypicalEntrys.AWARD_WITH_NO_ENTRYINFO.toString()
+                .equals(" Category: Awards Title:  SubHeader:  Duration:  Tags: "));
     }
 
 

@@ -7,13 +7,13 @@ import static seedu.address.logic.parser.CliSyntax.PREFIX_SUBHEADER;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TAGS;
 import static seedu.address.logic.parser.CliSyntax.PREFIX_TITLE;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Stream;
 
 import seedu.address.logic.commands.AddEntryCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
+import seedu.address.model.category.Category;
+import seedu.address.model.entry.EntryInfo;
 import seedu.address.model.entry.ResumeEntry;
 import seedu.address.model.tag.Tag;
 
@@ -31,26 +31,33 @@ public class AddEntryCommandParser implements Parser<AddEntryCommand> {
                 args, PREFIX_SECTION_TYPE, PREFIX_TAGS, PREFIX_TITLE,
                 PREFIX_SUBHEADER, PREFIX_DURATION);
 
-        if (!arePrefixesPresent(argMultimap, PREFIX_SECTION_TYPE, PREFIX_TITLE,
-                PREFIX_SUBHEADER, PREFIX_DURATION, PREFIX_TAGS)
+        if (!arePrefixesPresent(argMultimap, PREFIX_SECTION_TYPE)
                 || !argMultimap.getPreamble().isEmpty()) {
             throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddEntryCommand.MESSAGE_USAGE));
         }
 
-        String category = ParserUtil.parseString(argMultimap.getValue(PREFIX_SECTION_TYPE).get());
-        List<String> entryInfo = new ArrayList<String>();
-        String header = ParserUtil.parseString(argMultimap.getValue(PREFIX_TITLE).get());
-        String subHeader = ParserUtil.parseString(argMultimap.getValue(PREFIX_SUBHEADER).get());
-        String duration = ParserUtil.parseString(argMultimap.getValue(PREFIX_DURATION).get());
-        entryInfo.add(header);
-        entryInfo.add(subHeader);
-        entryInfo.add(duration);
+        ResumeEntry entry;
+        Category category = ParserUtil.parseCategory(argMultimap.getValue(PREFIX_SECTION_TYPE).get());
         Set<Tag> tags = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAGS));
 
-        // v1.1 only allows addition of major entry, other types of entry addition to be released in future stages
-        ResumeEntry entry = new ResumeEntry(category, entryInfo, tags);
+        if (arePrefixesabsent(argMultimap, PREFIX_TITLE,
+                PREFIX_SUBHEADER, PREFIX_DURATION)) {
+            System.out.println("ENTERED MINOR ENTRY PARSER");
+            entry = new ResumeEntry(category, new EntryInfo(), tags);
+            return new AddEntryCommand(entry);
+        }
 
-        return new AddEntryCommand(entry);
+        if (arePrefixesPresent(argMultimap, PREFIX_TITLE, PREFIX_SUBHEADER, PREFIX_DURATION)) {
+            System.out.println("ENTERED MAJOR ENTRY PARSSER");
+            String header = ParserUtil.parseString(argMultimap.getValue(PREFIX_TITLE).get());
+            String subHeader = ParserUtil.parseString(argMultimap.getValue(PREFIX_SUBHEADER).get());
+            String duration = ParserUtil.parseString(argMultimap.getValue(PREFIX_DURATION).get());
+            EntryInfo info = ParserUtil.parseEntryInfo(header, subHeader, duration);
+            entry = new ResumeEntry(category, info, tags);
+            return new AddEntryCommand(entry);
+        }
+
+        throw new ParseException(String.format(MESSAGE_INVALID_COMMAND_FORMAT, AddEntryCommand.MESSAGE_USAGE));
     }
 
     /**
@@ -59,6 +66,14 @@ public class AddEntryCommandParser implements Parser<AddEntryCommand> {
      */
     private static boolean arePrefixesPresent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {
         return Stream.of(prefixes).allMatch(prefix -> argumentMultimap.getValue(prefix).isPresent());
+    }
+
+    /**
+     * Returns true if all of the prefixes contains empty {@code Optional} values in the given
+     * {@code ArgumentMultimap}.
+     */
+    private static boolean arePrefixesabsent(ArgumentMultimap argumentMultimap, Prefix... prefixes) {
+        return Stream.of(prefixes).noneMatch(prefix -> argumentMultimap.getValue(prefix).isPresent());
     }
 
 }

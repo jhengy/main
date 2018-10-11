@@ -4,7 +4,6 @@ import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
 import java.util.Collections;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Objects;
 import java.util.Set;
 
@@ -17,23 +16,29 @@ import seedu.address.model.tag.Tag;
 public class ResumeEntry implements Taggable {
 
     private Category category;
-    private EntryInfo entryInfo; // contains title,subheader and duration of the entry
+    private EntryInfo entryInfo; // contains either title,subheader and duration of the entry, or none at all
     private Set<Tag> tags = new HashSet<>();
     private EntryDescription description = new EntryDescription();
 
     /**
      * Constructs a {@code ResumeEntry}.
-     *
-     * @param category A valid category name.
+     *  @param category A valid category name.
      * @param entryInfo A valid entryInfo.
      * @param tags A set of tags, can be empty.
      *
      */
-    public ResumeEntry(String category, List<String> entryInfo, Set<Tag> tags) {
+    public ResumeEntry(Category category, EntryInfo entryInfo, Set<Tag> tags) {
         requireAllNonNull(category, tags, entryInfo);
-        this.category = new Category(category);
+        this.category = category;
         this.tags.addAll(tags);
-        this.entryInfo = new EntryInfo(entryInfo);
+        this.entryInfo = entryInfo;
+    }
+
+    /**
+     * @return checks if the entry is a minor entry := any entry without title, subHeader and duration.
+     */
+    public boolean isMonorEntry() {
+        return entryInfo.isEmpty();
     }
 
     public Category getCategory() {

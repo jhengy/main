@@ -2,14 +2,19 @@ package seedu.address.logic.parser;
 
 import static java.util.Objects.requireNonNull;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 import seedu.address.commons.core.index.Index;
+import seedu.address.commons.util.CollectionUtil;
 import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.category.Category;
+import seedu.address.model.entry.EntryInfo;
 import seedu.address.model.person.Address;
 import seedu.address.model.person.Email;
 import seedu.address.model.person.Name;
@@ -105,6 +110,19 @@ public class ParserUtil {
             throw new ParseException(Category.MESSAGE_CATE_CONSTRAINTS);
         }
         return new Category(trimmedCategory);
+    }
+
+    /**
+     *
+     * Parses {@code String header} {@code String subHeader} {@code String duration} into an {@code EntryInfo}.
+     * @throws ParseException
+     */
+    public static EntryInfo parseEntryInfo(String header, String subHeader, String duration) throws ParseException {
+        List<String> entryInfoList = Arrays.asList(header, subHeader, duration);
+        CollectionUtil.requireAllNonNull(entryInfoList);
+        List<String> trimmedEntryInfoList = entryInfoList.stream()
+                .map(s -> s.trim()).collect(Collectors.toList());
+        return new EntryInfo(trimmedEntryInfoList);
     }
 
     /**

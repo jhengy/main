@@ -82,6 +82,13 @@ public class EntryBuilder {
 
 
     public ResumeEntry build() {
-        return new ResumeEntry(category.cateName, entryInfo.getEntryInfo(), tags);
+        return new ResumeEntry(category, entryInfo, tags);
+    }
+
+    /**
+     * @return a minor entry, i.e. without entryInfo
+     */
+    public ResumeEntry buildMinorEntry() {
+        return new ResumeEntry(category, new EntryInfo(), tags);
     }
 }
