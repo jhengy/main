@@ -12,7 +12,7 @@ import seedu.address.logic.CommandHistory;
 import seedu.address.logic.commands.exceptions.CommandException;
 
 import seedu.address.model.Model;
-import seedu.address.model.entry.MajorResumeEntry;
+import seedu.address.model.entry.ResumeEntry;
 
 /**
  * Adds an entry to the ResuMaker.
@@ -37,12 +37,12 @@ public class AddEntryCommand extends Command {
     public static final String MESSAGE_SUCCESS = "New ResumeEntry added for ResuMaker: %1$s";
     public static final String MESSAGE_DUPLICATE_PERSON = "This entry already exists in the resuMaker";
 
-    private final MajorResumeEntry toAdd;
+    private final ResumeEntry toAdd;
 
     /**
      * Creates an AddCommand to add the specified {@code Person}
      */
-    public AddEntryCommand(MajorResumeEntry entry) {
+    public AddEntryCommand(ResumeEntry entry) {
         requireNonNull(entry); // if the object is null throw nullpointer exception, else return the object
         toAdd = entry;
     }

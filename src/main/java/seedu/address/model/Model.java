@@ -4,7 +4,7 @@ import java.util.function.Predicate;
 
 import javafx.collections.ObservableList;
 
-import seedu.address.model.entry.MajorResumeEntry;
+import seedu.address.model.entry.ResumeEntry;
 import seedu.address.model.person.Person;
 
 /**
@@ -30,7 +30,7 @@ public interface Model {
      * @param entry to be searched
      * @return true if an entry with the same identity as {@code entry} exists in the ResuMaker.
      */
-    boolean hasEntry(MajorResumeEntry entry);
+    boolean hasEntry(ResumeEntry entry);
 
     /**
      * Deletes the given person.

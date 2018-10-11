@@ -14,7 +14,7 @@ import seedu.address.model.tag.Tag;
 /**
  * class encapsulating entries under education, experience or project section
  */
-public class MajorResumeEntry implements Taggable {
+public class ResumeEntry implements Taggable {
 
     private Category category;
     private EntryInfo entryInfo; // contains title,subheader and duration of the entry
@@ -22,14 +22,14 @@ public class MajorResumeEntry implements Taggable {
     private EntryDescription description = new EntryDescription();
 
     /**
-     * Constructs a {@code MajorResumeEntry}.
+     * Constructs a {@code ResumeEntry}.
      *
      * @param category A valid category name.
      * @param entryInfo A valid entryInfo.
      * @param tags A set of tags, can be empty.
      *
      */
-    public MajorResumeEntry(String category, List<String> entryInfo, Set<Tag> tags) {
+    public ResumeEntry(String category, List<String> entryInfo, Set<Tag> tags) {
         requireAllNonNull(category, tags, entryInfo);
         this.category = new Category(category);
         this.tags.addAll(tags);
@@ -61,7 +61,7 @@ public class MajorResumeEntry implements Taggable {
      * tags
      * This defines a weaker notion of equality between two entries.
      */
-    public boolean isSameEntry(MajorResumeEntry otherMajorEntry) {
+    public boolean isSameEntry(ResumeEntry otherMajorEntry) {
         if (otherMajorEntry == this) {
             return true;
         }
@@ -82,11 +82,11 @@ public class MajorResumeEntry implements Taggable {
             return true;
         }
 
-        if (!(other instanceof MajorResumeEntry)) {
+        if (!(other instanceof ResumeEntry)) {
             return false;
         }
 
-        MajorResumeEntry otherMajorEntry = (MajorResumeEntry) other;
+        ResumeEntry otherMajorEntry = (ResumeEntry) other;
         return otherMajorEntry.category.equals(category)
                 && otherMajorEntry.getTags().equals(tags)
                 && otherMajorEntry.getDescription().equals(description)
@@ -103,7 +103,8 @@ public class MajorResumeEntry implements Taggable {
     // note: Description is omitted
     public String toString() {
         final StringBuilder builder = new StringBuilder();
-        builder.append(category.cateName)
+        builder.append(" Category: ")
+                .append(category.cateName)
                 .append(entryInfo)
                 .append(" Tags: ");
         getTags().forEach(builder::append);

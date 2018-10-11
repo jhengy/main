@@ -14,7 +14,7 @@ import java.util.stream.Stream;
 
 import seedu.address.logic.commands.AddEntryCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
-import seedu.address.model.entry.MajorResumeEntry;
+import seedu.address.model.entry.ResumeEntry;
 import seedu.address.model.tag.Tag;
 
 /**
@@ -48,7 +48,7 @@ public class AddEntryCommandParser implements Parser<AddEntryCommand> {
         Set<Tag> tags = ParserUtil.parseTags(argMultimap.getAllValues(PREFIX_TAGS));
 
         // v1.1 only allows addition of major entry, other types of entry addition to be released in future stages
-        MajorResumeEntry entry = new MajorResumeEntry(category, entryInfo, tags);
+        ResumeEntry entry = new ResumeEntry(category, entryInfo, tags);
 
         return new AddEntryCommand(entry);
     }

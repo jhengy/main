@@ -18,7 +18,7 @@ public class EntryTest {
 
     @Test
     public void asObservableList_modifyList_throwsUnsupportedOperationException() {
-        MajorResumeEntry entry = new EntryBuilder().build();
+        ResumeEntry entry = new EntryBuilder().build();
         thrown.expect(UnsupportedOperationException.class);
         entry.getTags().remove(0);
     }
@@ -37,9 +37,9 @@ public class EntryTest {
         assertFalse(NUS_EDUCATION.isSameEntry(null));
 
         // different category -> returns false
-        MajorResumeEntry editedWork = new EntryBuilder(WORK_FACEBOOK).withCategory("education").build();
+        ResumeEntry editedWork = new EntryBuilder(WORK_FACEBOOK).withCategory("education").build();
         assertFalse(WORK_FACEBOOK.isSameEntry(editedWork));
-        MajorResumeEntry editedEducation = new EntryBuilder(NUS_EDUCATION).withCategory("work").build();
+        ResumeEntry editedEducation = new EntryBuilder(NUS_EDUCATION).withCategory("work").build();
         assertFalse(NUS_EDUCATION.isSameEntry(editedEducation));
 
         // all fields different
@@ -61,9 +61,9 @@ public class EntryTest {
         assertFalse(NUS_EDUCATION.equals(null));
 
         // different category -> returns false
-        MajorResumeEntry editedWork = new EntryBuilder(WORK_FACEBOOK).withCategory("education").build();
+        ResumeEntry editedWork = new EntryBuilder(WORK_FACEBOOK).withCategory("education").build();
         assertFalse(WORK_FACEBOOK.equals(editedWork));
-        MajorResumeEntry editedEducation = new EntryBuilder(NUS_EDUCATION).withCategory("work").build();
+        ResumeEntry editedEducation = new EntryBuilder(NUS_EDUCATION).withCategory("work").build();
         assertFalse(NUS_EDUCATION.equals(editedEducation));
 
         // all fields different
@@ -71,7 +71,7 @@ public class EntryTest {
 
         // test toString()
         assertTrue(WORK_FACEBOOK.toString()
-                .equals("work Title: Facebook SubHeader: software engineering intern"
+                .equals(" Category: work Title: Facebook SubHeader: software engineering intern"
                         + " Duration: 2010 - 2013 Tags: [java]"));
     }
 

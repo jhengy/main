@@ -13,7 +13,7 @@ import javafx.collections.transformation.FilteredList;
 import seedu.address.commons.core.ComponentManager;
 import seedu.address.commons.core.LogsCenter;
 import seedu.address.commons.events.model.AddressBookChangedEvent;
-import seedu.address.model.entry.MajorResumeEntry;
+import seedu.address.model.entry.ResumeEntry;
 import seedu.address.model.person.Person;
 
 /**
@@ -66,7 +66,7 @@ public class ModelManager extends ComponentManager implements Model {
 
     @Override
     // to be modified
-    public boolean hasEntry(MajorResumeEntry entry) {
+    public boolean hasEntry(ResumeEntry entry) {
         return false;
     }
 
