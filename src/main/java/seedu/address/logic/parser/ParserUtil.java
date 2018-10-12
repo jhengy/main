@@ -122,6 +122,10 @@ public class ParserUtil {
         CollectionUtil.requireAllNonNull(entryInfoList);
         List<String> trimmedEntryInfoList = entryInfoList.stream()
                 .map(s -> s.trim()).collect(Collectors.toList());
+
+        if (!EntryInfo.isValidEntryInfo(trimmedEntryInfoList)) {
+            throw new ParseException(EntryInfo.MESSAGE_ENTRYINFO_CONSTRAINTS);
+        }
         return new EntryInfo(trimmedEntryInfoList);
     }
 

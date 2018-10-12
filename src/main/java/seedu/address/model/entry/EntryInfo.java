@@ -11,9 +11,9 @@ import java.util.List;
  */
 public class EntryInfo {
 
-    public static final String ENTRYINFO_VALIDATION_REGEX = "^[A-Za-z0-9 ]+$";
+    public static final String ENTRYINFO_VALIDATION_REGEX = "^[A-Za-z0-9 -]+$";
     public static final String MESSAGE_ENTRYINFO_CONSTRAINTS =
-            "header, subHeader and duration must be alphanumeric and space separated";
+            "header, subHeader and duration must be alphanumeric and space or dash separated";
 
     private List<String> entryInfo = new LinkedList<String>();
 
@@ -56,7 +56,7 @@ public class EntryInfo {
         return entryInfo.isEmpty();
     }
 
-    public boolean isValidEntryInfo(List<String> entryInfo) {
+    public static boolean isValidEntryInfo(List<String> entryInfo) {
         return entryInfo.stream().allMatch(s -> s.matches(ENTRYINFO_VALIDATION_REGEX));
     }
     /**
