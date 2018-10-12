@@ -19,7 +19,7 @@ public class EntryListPanel extends UiPart<Region> {
     private final Logger logger = LogsCenter.getLogger(EntryListPanel.class);
 
     @FXML
-    private ListView<ResumeEntry> entryListPanel;
+    private ListView<ResumeEntry> entryListView;
 
     public EntryListPanel(ObservableList<ResumeEntry> entryList) {
         super(FXML);
@@ -28,13 +28,19 @@ public class EntryListPanel extends UiPart<Region> {
     }
 
     private void setConnections(ObservableList<ResumeEntry> entryList) {
-        entryListPanel.setItems(entryList);
-        entryListPanel.setCellFactory(listView -> new EntryListViewCell());
-        setEventHandlerForSelectionChangeEvent();
+        try{
+            System.out.println("test" + entryList + " " + entryList == null);
+            entryListView.setItems(entryList);
+            entryListView.setCellFactory(listView -> new EntryListViewCell());
+            setEventHandlerForSelectionChangeEvent();
+        } catch (NullPointerException e) {
+            System.out.println("null pointer caught");
+        }
+
     }
 
     private void setEventHandlerForSelectionChangeEvent() {
-        entryListPanel.getSelectionModel().selectedItemProperty()
+        entryListView.getSelectionModel().selectedItemProperty()
                 .addListener((observable, oldValue, newValue) -> {
                     if (newValue != null) {
                         logger.fine("Selection in person list panel changed to : '" + newValue + "'");
@@ -48,8 +54,8 @@ public class EntryListPanel extends UiPart<Region> {
      */
     private void scrollTo(int index) {
         Platform.runLater(() -> {
-            entryListPanel.scrollTo(index);
-            entryListPanel.getSelectionModel().clearAndSelect(index);
+            entryListView.scrollTo(index);
+            entryListView.getSelectionModel().clearAndSelect(index);
         });
     }
 
