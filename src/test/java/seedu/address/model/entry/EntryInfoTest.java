@@ -9,10 +9,14 @@ import org.junit.Test;
 
 import seedu.address.testutil.EntryBuilder;
 
+/**
+ * a class to test EntryInfo
+ */
 public class EntryInfoTest {
 
     public EntryInfo buildEntryInfo() {
-        List<String> list = Arrays.asList(EntryBuilder.DEFAULT_TITLE, EntryBuilder.DEFAULT_CAT, EntryBuilder.DEFAULT_DURATION);
+        List<String> list = Arrays.asList(EntryBuilder.DEFAULT_TITLE, EntryBuilder.DEFAULT_CAT
+                , EntryBuilder.DEFAULT_DURATION);
         return new EntryInfo(list);
     }
 
