@@ -1,8 +1,9 @@
 package seedu.address.ui;
 
+import java.util.logging.Logger;
+
 import com.google.common.eventbus.Subscribe;
 
-import java.util.logging.Logger;
 import javafx.application.Platform;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -28,15 +29,10 @@ public class EntryListPanel extends UiPart<Region> {
     }
 
     private void setConnections(ObservableList<ResumeEntry> entryList) {
-        try{
             System.out.println("test" + entryList + " " + entryList == null);
             entryListView.setItems(entryList);
             entryListView.setCellFactory(listView -> new EntryListViewCell());
             setEventHandlerForSelectionChangeEvent();
-        } catch (NullPointerException e) {
-            System.out.println("null pointer caught");
-        }
-
     }
 
     private void setEventHandlerForSelectionChangeEvent() {
