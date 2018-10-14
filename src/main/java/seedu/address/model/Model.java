@@ -45,6 +45,13 @@ public interface Model {
     void addPerson(Person person);
 
     /**
+     * Adds the given person.
+     * {@code entry} must not already exist in the address book.
+     */
+    void addEntry(ResumeEntry entry);
+
+
+    /**
      * Replaces the given person {@code target} with {@code editedPerson}.
      * {@code target} must exist in the address book.
      * The person identity of {@code editedPerson} must not be the same as another existing person in the address book.

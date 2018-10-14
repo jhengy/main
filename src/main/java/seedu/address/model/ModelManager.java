@@ -71,6 +71,10 @@ public class ModelManager extends ComponentManager implements Model {
     }
 
     @Override
+    public void addEntry(ResumeEntry entry) {
+        // TO Be implemented
+    }
+    @Override
     public void deletePerson(Person target) {
         versionedAddressBook.removePerson(target);
         indicateAddressBookChanged();

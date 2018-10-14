@@ -42,13 +42,13 @@ public class AddEntryCommandParser implements Parser<AddEntryCommand> {
 
         if (arePrefixesabsent(argMultimap, PREFIX_TITLE,
                 PREFIX_SUBHEADER, PREFIX_DURATION)) {
-            System.out.println("ENTERED MINOR ENTRY PARSER");
+            //System.out.println("ENTERED MINOR ENTRY PARSER");
             entry = new ResumeEntry(category, new EntryInfo(), tags);
             return new AddEntryCommand(entry);
         }
 
         if (arePrefixesPresent(argMultimap, PREFIX_TITLE, PREFIX_SUBHEADER, PREFIX_DURATION)) {
-            System.out.println("ENTERED MAJOR ENTRY PARSSER");
+            //System.out.println("ENTERED MAJOR ENTRY PARSSER");
             String header = ParserUtil.parseString(argMultimap.getValue(PREFIX_TITLE).get());
             String subHeader = ParserUtil.parseString(argMultimap.getValue(PREFIX_SUBHEADER).get());
             String duration = ParserUtil.parseString(argMultimap.getValue(PREFIX_DURATION).get());

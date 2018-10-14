@@ -14,9 +14,13 @@ import seedu.address.testutil.EntryBuilder;
  */
 public class EntryInfoTest {
 
+    /**
+     * Builder for EntryInfo
+     * @return EntryInfo with default values
+     */
     public EntryInfo buildEntryInfo() {
-        List<String> list = Arrays.asList(EntryBuilder.DEFAULT_TITLE, EntryBuilder.DEFAULT_CAT
-                , EntryBuilder.DEFAULT_DURATION);
+        List<String> list = Arrays.asList(EntryBuilder.DEFAULT_TITLE, EntryBuilder.DEFAULT_CAT,
+                EntryBuilder.DEFAULT_DURATION);
         return new EntryInfo(list);
     }
 
