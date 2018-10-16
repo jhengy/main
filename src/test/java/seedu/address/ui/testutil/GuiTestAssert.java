@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import guitests.guihandles.EntryCardHandle;
 import guitests.guihandles.PersonCardHandle;
 import guitests.guihandles.PersonListPanelHandle;
 import guitests.guihandles.ResultDisplayHandle;
@@ -42,11 +43,11 @@ public class GuiTestAssert {
     /**
      * Asserts that {@code actualCard} displays the details of {@code expectedEntry}.
      */
-    public static void assertCardDisplaysEntry(ResumeEntry expectedEntry, PersonCardHandle actualCard) {
-        assertEquals(expectedEntry.getName().fullName, actualCard.getName());
-        assertEquals(expectedEntry.getPhone().value, actualCard.getPhone());
-        assertEquals(expectedEntry.getEmail().value, actualCard.getEmail());
-        assertEquals(expectedEntry.getAddress().value, actualCard.getAddress());
+    public static void assertCardDisplaysEntry(ResumeEntry expectedEntry, EntryCardHandle actualCard) {
+        assertEquals(expectedEntry.getCategory().cateName, actualCard.getCategory());
+        assertEquals(expectedEntry.getEntryInfo().getTitle(), actualCard.getTitle());
+        assertEquals(expectedEntry.getEntryInfo().getSubHeader(), actualCard.getSubtitle());
+        assertEquals(expectedEntry.getEntryInfo().getDuration(), actualCard.getDuration());
         assertEquals(expectedEntry.getTags().stream().map(tag -> tag.tagName).collect(Collectors.toList()),
                 actualCard.getTags());
     }
