@@ -51,8 +51,7 @@ public class EntryCard extends UiPart<Region> {
             return true;
         }
 
-        // instanceof handles nulls
-        if (!(other instanceof PersonCard)) {
+        if (!(other instanceof EntryCard)) {
             return false;
         }
 
