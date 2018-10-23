@@ -200,9 +200,10 @@ public class MainWindow extends UiPart<Stage> {
         return personListPanel;
     }
 
+    /* to be completed later
     public EntryListPanel getEntryListPanel() {
         return entryListPanel;
-    }
+    }*/
 
     void releaseResources() {
         browserPanel.freeResources();
