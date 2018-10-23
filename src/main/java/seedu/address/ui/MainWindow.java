@@ -52,8 +52,8 @@ public class MainWindow extends UiPart<Stage> {
     @FXML
     private MenuItem helpMenuItem;
 
-    @FXML
-    private StackPane personListPanelPlaceholder;
+    //@FXML
+    //private StackPane personListPanelPlaceholder;
 
     @FXML
     private StackPane entryListPanelPlaceholder;
@@ -129,7 +129,7 @@ public class MainWindow extends UiPart<Stage> {
         browserPlaceholder.getChildren().add(browserPanel.getRoot());
 
         personListPanel = new PersonListPanel(logic.getFilteredPersonList());
-        personListPanelPlaceholder.getChildren().add(personListPanel.getRoot());
+        //personListPanelPlaceholder.getChildren().add(personListPanel.getRoot());
 
         entryListPanel = new EntryListPanel(logic.getFilteredEntryList());
         entryListPanelPlaceholder.getChildren().add(entryListPanel.getRoot());
