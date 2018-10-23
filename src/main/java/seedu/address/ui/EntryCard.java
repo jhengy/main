@@ -7,6 +7,9 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Region;
 import seedu.address.model.entry.ResumeEntry;
 
+/**
+ * An UI component that displays information of a {@code ResumeEntry}.
+ */
 public class EntryCard extends UiPart<Region> {
     private static final String FXML = "EntryListCard.fxml";
 

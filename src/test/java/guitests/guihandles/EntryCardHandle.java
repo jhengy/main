@@ -10,6 +10,9 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.Region;
 import seedu.address.model.entry.ResumeEntry;
 
+/**
+ * provides a handle to a entry card in the entry list panel.
+ */
 public class EntryCardHandle extends NodeHandle<Node> {
     private static final String ID_FIELD_ID = "#id";
     private static final String TITLE_FIELD_ID = "#title";

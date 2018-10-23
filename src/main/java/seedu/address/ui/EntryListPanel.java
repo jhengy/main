@@ -15,6 +15,9 @@ import seedu.address.commons.events.ui.EntryPanelSelectionChangedEvent;
 import seedu.address.commons.events.ui.JumpToListRequestEvent;
 import seedu.address.model.entry.ResumeEntry;
 
+/**
+ * panel containing a list of entries
+ */
 public class EntryListPanel extends UiPart<Region> {
     private static final String FXML = "EntryListPanel.fxml";
     private final Logger logger = LogsCenter.getLogger(EntryListPanel.class);
@@ -29,10 +32,9 @@ public class EntryListPanel extends UiPart<Region> {
     }
 
     private void setConnections(ObservableList<ResumeEntry> entryList) {
-            System.out.println("test" + entryList + " " + entryList == null);
-            entryListView.setItems(entryList);
-            entryListView.setCellFactory(listView -> new EntryListViewCell());
-            setEventHandlerForSelectionChangeEvent();
+        entryListView.setItems(entryList);
+        entryListView.setCellFactory(listView -> new EntryListViewCell());
+        setEventHandlerForSelectionChangeEvent();
     }
 
     private void setEventHandlerForSelectionChangeEvent() {
