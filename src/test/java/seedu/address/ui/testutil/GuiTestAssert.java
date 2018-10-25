@@ -29,6 +29,20 @@ public class GuiTestAssert {
     }
 
     /**
+     * Asserts that {@code actualCard} displays the same values as {@code expectedCard}.
+     */
+    public static void assertCardEquals(EntryCardHandle expectedCard, EntryCardHandle actualCard) {
+        assertEquals(expectedCard.getId(), actualCard.getId());
+        assertEquals(expectedCard.getCategory(), actualCard.getCategory());
+        assertEquals(expectedCard.getTitle(), actualCard.getTitle());
+        assertEquals(expectedCard.getSubtitle(), actualCard.getSubtitle());
+        assertEquals(expectedCard.getDuration(), actualCard.getDuration());
+        assertEquals(expectedCard.getTags(), actualCard.getTags());
+    }
+
+
+
+    /**
      * Asserts that {@code actualCard} displays the details of {@code expectedPerson}.
      */
     public static void assertCardDisplaysPerson(Person expectedPerson, PersonCardHandle actualCard) {
