@@ -11,7 +11,6 @@ import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Region;
 import seedu.address.commons.core.LogsCenter;
-import seedu.address.commons.events.ui.EntryPanelSelectionChangedEvent;
 import seedu.address.commons.events.ui.JumpToListRequestEvent;
 import seedu.address.model.entry.ResumeEntry;
 
@@ -34,9 +33,11 @@ public class EntryListPanel extends UiPart<Region> {
     private void setConnections(ObservableList<ResumeEntry> entryList) {
         entryListView.setItems(entryList);
         entryListView.setCellFactory(listView -> new EntryListViewCell());
-        setEventHandlerForSelectionChangeEvent();
+        //setEventHandlerForSelectionChangeEvent(); // to be completed when implementing select command
     }
 
+    /*
+    // to be completed when implementing select command
     private void setEventHandlerForSelectionChangeEvent() {
         entryListView.getSelectionModel().selectedItemProperty()
                 .addListener((observable, oldValue, newValue) -> {
@@ -45,7 +46,7 @@ public class EntryListPanel extends UiPart<Region> {
                         raise(new EntryPanelSelectionChangedEvent(newValue));
                     }
                 });
-    }
+    } */
 
     /**
      * Scrolls to the {@code EntryCard} at the {@code index} and selects it.
