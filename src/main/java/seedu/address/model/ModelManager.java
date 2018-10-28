@@ -129,6 +129,14 @@ public class ModelManager extends ComponentManager implements Model {
         indicateAddressBookChanged();
     }
 
+    @Override
+    public void updateEntry(ResumeEntry target, ResumeEntry editedEntry) {
+        requireAllNonNull(target, editedEntry);
+
+        versionedEntryBook.updateEntry(target, editedEntry);
+        indicateAddressBookChanged();
+    }
+    
     //=========== Filtered Person List Accessors =============================================================
 
     /**
