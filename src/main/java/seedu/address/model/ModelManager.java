@@ -136,7 +136,6 @@ public class ModelManager extends ComponentManager implements Model {
         versionedEntryBook.updateEntry(target, editedEntry);
         indicateAddressBookChanged();
     }
-    
     //=========== Filtered Person List Accessors =============================================================
 
     /**
