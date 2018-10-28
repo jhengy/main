@@ -64,6 +64,17 @@ public class EntryBuilder {
         return this;
     }
 
+    public EntryBuilder withDescription(EntryDescription description) {
+        this.description = description;
+        return this;
+    }
+
+    public EntryBuilder addBulletToDescription(String bullet) {
+        description.addBullet(bullet);
+        return this;
+    }
+
+
     /**
      * Sets the {@code Phone} of the {@code Person} that we are building.
      */
