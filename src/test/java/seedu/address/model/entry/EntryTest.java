@@ -88,8 +88,8 @@ public class EntryTest {
     @Test
     public void testEntryWithAddedBullet() {
         ResumeEntry entry = new EntryBuilder().addBulletToDescription("this is a line of description").build();
-        assertTrue(entry.getEntryWithAddedBullet("this is a line of description").
-                isSameEntry(entry));
+        assertTrue(entry.getEntryWithAddedBullet("this is a line of description")
+                .isSameEntry(entry));
     }
 
 

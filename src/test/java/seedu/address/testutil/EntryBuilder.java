@@ -57,18 +57,24 @@ public class EntryBuilder {
     }
 
     /**
-     * Sets the {@code Address} of the {@code Person} that we are building.
+     * Sets the {@code title} of the {@code Entry} that we are building.
      */
     public EntryBuilder withTitle(String title) {
         entryInfo.setTitle(title);
         return this;
     }
 
+    /**
+     * Sets the {@code description} of the {@code Entry} that we are building.
+     */
     public EntryBuilder withDescription(EntryDescription description) {
         this.description = description;
         return this;
     }
 
+    /**
+     * add a bullet description to the {@code Entry} that we are building.
+     */
     public EntryBuilder addBulletToDescription(String bullet) {
         description.addBullet(bullet);
         return this;
