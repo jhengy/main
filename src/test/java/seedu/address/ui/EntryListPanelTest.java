@@ -23,7 +23,8 @@ public class EntryListPanelTest extends GuiUnitTest {
     private static final ObservableList<ResumeEntry> TYPICAL_ENTRIES =
             FXCollections.observableList(getTypicalEntries());
 
-    private static final JumpToEntryListRequestEvent JUMP_TO_SECOND_EVENT = new JumpToEntryListRequestEvent(INDEX_SECOND_ENTRY);
+    private static final JumpToEntryListRequestEvent JUMP_TO_SECOND_EVENT =
+            new JumpToEntryListRequestEvent(INDEX_SECOND_ENTRY);
 
     private static final Path TEST_DATA_FOLDER = Paths.get("src", "test", "data", "sandbox");
 
