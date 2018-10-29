@@ -19,7 +19,7 @@ public class AddBulletCommand extends Command {
     public static final String COMMAND_WORD = "addBullet";
 
     public static final String MESSAGE_USAGE = COMMAND_WORD + ": Adds a bullet description identified "
-            + "by the index number used in the displayed person list.\n"
+            + "by the index number used in the displayed entry list.\n"
             + "Parameters: INDEX (must be a positive integer) "
             + "CONTENT_TO_ADD\n"
             + "Example: " + COMMAND_WORD + " 1 "
