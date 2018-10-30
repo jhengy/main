@@ -57,7 +57,7 @@ public class AddBulletCommand extends Command {
 
         model.updateEntry(entryToEdit, editedEntry);
         model.updateFilteredEntryList(PREDICATE_SHOW_ALL_ENTRIES);
-        model.commitAddressBook();
+        model.commitEntryBook();
         return new CommandResult(String.format(MESSAGE_ADDBULLET_SUCCESS, bullet));
     }
 
