@@ -7,7 +7,7 @@ import seedu.address.model.entry.EntryDescription;
  */
 public class TypicalEntryDescription {
     // Description for an entry under category ~work
-    public static final String FINANCIAL_HACK_AWARD = "Attained 2011 est Performance Award";
+    public static final String FINANCIAL_HACK_AWARD = "Attained 2011 best Performance Award";
     public static final String SE_PRINCIPLE = "Adhered to high quality development standards "
             + "while delivering solutions on time and on budget";
     public static final String CONSULTATION_WITH_CUSTOMERS = "Consulted regularly with customers "
