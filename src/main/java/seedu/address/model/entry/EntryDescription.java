@@ -40,7 +40,7 @@ public class EntryDescription {
      * @param bullet a bullet description
      * @return
      */
-    public boolean isValidBullet(String bullet) {
+    public static boolean isValidBullet(String bullet) {
         return !(isOnlyWhiteSpace(bullet) || isEmptyString(bullet));
     }
 
