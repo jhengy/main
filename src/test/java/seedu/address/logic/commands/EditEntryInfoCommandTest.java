@@ -21,6 +21,7 @@ import seedu.address.model.EntryBook;
 import seedu.address.model.Model;
 import seedu.address.model.ModelManager;
 import seedu.address.model.UserPrefs;
+import seedu.address.model.awareness.Awareness;
 import seedu.address.model.entry.ResumeEntry;
 import seedu.address.model.util.EntryBuilder;
 
@@ -28,7 +29,7 @@ import seedu.address.model.util.EntryBuilder;
  * Test for EditEntryInfoCommand
  */
 public class EditEntryInfoCommandTest {
-    private Model model = new ModelManager(getTypicalAddressBook(), getTypicalEntryBook(), new UserPrefs());
+    private Model model = new ModelManager(getTypicalAddressBook(), getTypicalEntryBook(), new UserPrefs(), new Awareness());
     private CommandHistory commandHistory = new CommandHistory();
     private ResumeEntry editedEntry = new EntryBuilder().withCategory("work")
             .withTitle("Facebook").withDuration("2010 - 2013")
@@ -43,7 +44,7 @@ public class EditEntryInfoCommandTest {
         String expectedMessage = String.format(EditEntryInfoCommand.MESSAGE_EDIT_ENTRYINFO_SUCCESS, editedEntry);
 
         Model expectedModel = new ModelManager(new AddressBook(model.getAddressBook()),
-                new EntryBook(model.getEntryBook()), new UserPrefs());
+                new EntryBook(model.getEntryBook()), new UserPrefs(), new Awareness());
         expectedModel.updateEntry(model.getFilteredEntryList().get(0), editedEntry);
         expectedModel.commitEntryBook();
 
