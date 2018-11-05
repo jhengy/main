@@ -29,7 +29,8 @@ import seedu.address.model.util.EntryBuilder;
  * Test for EditEntryInfoCommand
  */
 public class EditEntryInfoCommandTest {
-    private Model model = new ModelManager(getTypicalAddressBook(), getTypicalEntryBook(), new UserPrefs(), new Awareness());
+    private Model model = new ModelManager(getTypicalAddressBook(),
+            getTypicalEntryBook(), new UserPrefs(), new Awareness());
     private CommandHistory commandHistory = new CommandHistory();
     private ResumeEntry editedEntry = new EntryBuilder().withCategory("work")
             .withTitle("Facebook").withDuration("2010 - 2013")
