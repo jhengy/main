@@ -30,15 +30,15 @@ import seedu.address.model.util.EntryBuilder;
 public class EditEntryInfoCommandTest {
     private Model model = new ModelManager(getTypicalAddressBook(), getTypicalEntryBook(), new UserPrefs());
     private CommandHistory commandHistory = new CommandHistory();
-    ResumeEntry editedEntry = new EntryBuilder().withCategory("work")
+    private ResumeEntry editedEntry = new EntryBuilder().withCategory("work")
             .withTitle("Facebook").withDuration("2010 - 2013")
             .withSubHeader("software engineering intern")
             .withTags("java").build();
-    EditEntryInfoDescriptor descriptor = new EditEntryInfoDescriptor(editedEntry);
+    private EditEntryInfoDescriptor descriptor = new EditEntryInfoDescriptor(editedEntry);
 
     @Test
     public void execute_allFieldsSpecifiedUnfilteredList_success() {
-        EditEntryInfoCommand editCommand = new EditEntryInfoCommand(INDEX_FIRST_ENTRY,descriptor);
+        EditEntryInfoCommand editCommand = new EditEntryInfoCommand(INDEX_FIRST_ENTRY, descriptor);
 
         String expectedMessage = String.format(EditEntryInfoCommand.MESSAGE_EDIT_ENTRYINFO_SUCCESS, editedEntry);
 
@@ -99,6 +99,6 @@ public class EditEntryInfoCommandTest {
 
         // different descriptor -> returns false
         copyDescriptor.setTitle("Different title");
-        assertFalse(standardCommand.equals(new EditEntryInfoCommand(INDEX_FIRST_ENTRY,copyDescriptor)));
+        assertFalse(standardCommand.equals(new EditEntryInfoCommand(INDEX_FIRST_ENTRY, copyDescriptor)));
     }
 }

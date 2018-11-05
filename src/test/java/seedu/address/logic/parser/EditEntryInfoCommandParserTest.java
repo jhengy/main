@@ -29,7 +29,8 @@ public class EditEntryInfoCommandParserTest {
             .withTitle("Facebook").withDuration("2010 - 2013")
             .withSubHeader("software engineering intern")
             .withTags("java").build();
-    private EditEntryInfoCommand.EditEntryInfoDescriptor descriptor = new EditEntryInfoCommand.EditEntryInfoDescriptor(editedEntry);
+    private EditEntryInfoCommand.EditEntryInfoDescriptor descriptor =
+            new EditEntryInfoCommand.EditEntryInfoDescriptor(editedEntry);
 
     @Test
     public void parse_missingParts_failure() {

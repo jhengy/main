@@ -84,8 +84,8 @@ public class AddressBookParserTest {
         EditEntryInfoDescriptor descriptor = new EditEntryInfoDescriptor(WORK_FACEBOOK);
         String userInput = INDEX_FIRST_ENTRY.getOneBased()
                 + TITLE_DESC_FACEBOOK + SUBTITLE_DESC_FACEBOOK + DURATION_FACEBOOK;
-        EditEntryInfoCommand command = (EditEntryInfoCommand) parser.parseCommand(EditEntryInfoCommand.COMMAND_WORD + " "
-                + userInput);
+        EditEntryInfoCommand command = (EditEntryInfoCommand) parser
+                .parseCommand(EditEntryInfoCommand.COMMAND_WORD + " " + userInput);
         assertEquals(new EditEntryInfoCommand(INDEX_FIRST_ENTRY, descriptor), command);
     }
 

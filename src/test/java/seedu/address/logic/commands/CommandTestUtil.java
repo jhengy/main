@@ -71,8 +71,8 @@ public class CommandTestUtil {
     public static final String SUBTITLE_DESC = " " + PREFIX_SUBHEADER + VALID_SUBTITLE_COMPUTING;
     public static final String DURATION_DESC = " " + PREFIX_DURATION + VALID_DURATION_1;
     public static final String TITLE_DESC_FACEBOOK = " " + PREFIX_TITLE + VALID_TITLE_FACEBOOK;
-    public static final String SUBTITLE_DESC_FACEBOOK= " " + PREFIX_SUBHEADER + VALID_SUBTITLE_SE;
-    public static final String DURATION_FACEBOOK= " " + PREFIX_DURATION + VALID_DURATION_2;
+    public static final String SUBTITLE_DESC_FACEBOOK = " " + PREFIX_SUBHEADER + VALID_SUBTITLE_SE;
+    public static final String DURATION_FACEBOOK = " " + PREFIX_DURATION + VALID_DURATION_2;
 
     public static final String INVALID_NAME_DESC = " " + PREFIX_NAME + "James&"; // '&' not allowed in names
     public static final String INVALID_PHONE_DESC = " " + PREFIX_PHONE + "911a"; // 'a' not allowed in phones
