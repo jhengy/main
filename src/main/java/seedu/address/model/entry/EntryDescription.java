@@ -13,7 +13,7 @@ import java.util.List;
 public class EntryDescription {
 
     public static final String MESSAGE_ENTRYDESC_CONSTRAINTS = "A bullet description must not be "
-            + "empty and have at least one non whitespace character.";
+            + "empty and must have at least one non whitespace character.";
 
     private List<String> descriptionList;
 
@@ -41,7 +41,7 @@ public class EntryDescription {
      * @return
      */
     public static boolean isValidBullet(String bullet) {
-        return !(isOnlyWhiteSpace(bullet) || isEmptyString(bullet));
+        return !isOnlyWhiteSpace(bullet) && !isEmptyString(bullet);
     }
 
     @Override
