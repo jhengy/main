@@ -58,7 +58,6 @@ public class AddBulletCommand extends Command {
         ResumeEntry editedEntry = createEntryWithAddedBullet(entryToEdit, bullet);
 
         model.updateEntry(entryToEdit, editedEntry);
-        //model.updateFilteredEntryList(PREDICATE_SHOW_ALL_ENTRIES);
         model.commitEntryBook();
         EventsCenter.getInstance().post(new JumpToEntryListRequestEvent(index));
         EventsCenter.getInstance().post(new UpdateExpandedEntryRequestEvent(editedEntry));
