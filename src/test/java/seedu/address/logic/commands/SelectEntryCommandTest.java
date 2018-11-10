@@ -9,7 +9,6 @@ import static seedu.address.testutil.TypicalEntrys.getTypicalEntryBook;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_ENTRY;
 import static seedu.address.testutil.TypicalIndexes.INDEX_SECOND_ENTRY;
 import static seedu.address.testutil.TypicalIndexes.INDEX_THIRD_ENTRY;
-import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;
 
 import org.junit.Rule;
 import org.junit.Test;
