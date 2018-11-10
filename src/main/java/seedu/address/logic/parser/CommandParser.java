@@ -13,6 +13,7 @@ import seedu.address.logic.commands.ContextCommand;
 import seedu.address.logic.commands.EditEntryInfoCommand;
 import seedu.address.logic.commands.ExitCommand;
 import seedu.address.logic.commands.HelpCommand;
+import seedu.address.logic.commands.HistoryCommand;
 import seedu.address.logic.commands.LoadTemplateCommand;
 import seedu.address.logic.commands.MakeCommand;
 import seedu.address.logic.commands.SelectEntryCommand;
@@ -76,6 +77,9 @@ public class CommandParser {
 
         case SelectEntryCommand.COMMAND_WORD:
             return new SelectEntryCommandParser().parse(arguments);
+
+        case HistoryCommand.COMMAND_WORD:
+            return new HistoryCommand();
 
         case HelpCommand.COMMAND_WORD:
             return new HelpCommand();
