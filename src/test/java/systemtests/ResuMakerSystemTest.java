@@ -57,7 +57,7 @@ public abstract class ResuMakerSystemTest {
     @Before
     public void setUp() {
         setupHelper = new SystemTestSetupHelper();
-        testApp = setupHelper.setupApplication(this::getInitialData, getDataFileLocation());
+        testApp = setupHelper.setupApplication(getDataFileLocation());
         mainWindowHandle = setupHelper.setupMainWindowHandle();
         assertApplicationStartingStateIsCorrect();
     }
