@@ -35,7 +35,6 @@ public class MainWindow extends UiPart<Stage> {
 
     // Independent Ui parts residing in this Ui container
     private BrowserPanel browserPanel;
-    private PersonListPanel personListPanel;
     private ExpandedEntryPanel expandedEntryPanel;
 
     private EntryListPanel entryListPanel;
@@ -138,7 +137,6 @@ public class MainWindow extends UiPart<Stage> {
         browserPanel = new BrowserPanel();
         browserPlaceholder.getChildren().add(browserPanel.getRoot());
 
-        personListPanel = new PersonListPanel(logic.getFilteredPersonList());
         personListPanelPlaceholder.getChildren().add(personListPanel.getRoot());
 
         entryListPanel = new EntryListPanel(logic.getFilteredEntryList());
@@ -215,17 +213,14 @@ public class MainWindow extends UiPart<Stage> {
         raise(new ExitAppRequestEvent());
     }
 
-    public PersonListPanel getPersonListPanel() {
-        return personListPanel;
-    }
-
-    /* to be completed later
-    public EntryListPanel getEntryListPanel() {
-        return entryListPanel;
-    }*/
+    // TODO: to be completed later
+    // public EntryListPanel getEntryListPanel() {
+    //     return entryListPanel;
+    // }
 
     void releaseResources() {
-        //browserPanel.freeResources();
+        // TODO: remove browser panel
+        // browserPanel.freeResources();
     }
 
     @Subscribe

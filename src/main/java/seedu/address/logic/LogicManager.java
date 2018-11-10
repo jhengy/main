@@ -16,7 +16,6 @@ import seedu.address.logic.parser.AddressBookParser;
 import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.Model;
 import seedu.address.model.entry.ResumeEntry;
-import seedu.address.model.person.Person;
 
 /**
  * The main LogicManager of the app.
@@ -26,7 +25,7 @@ public class LogicManager extends ComponentManager implements Logic {
 
     private final Model model;
     private final CommandHistory history;
-    private final AddressBookParser addressBookParser;
+    private final mainParser mainParser;
     private final List<CmdLineObserver> cmdLineObservers = new LinkedList<>();
 
     public LogicManager(Model model) {
@@ -52,11 +51,6 @@ public class LogicManager extends ComponentManager implements Logic {
         } finally {
             history.add(commandText);
         }
-    }
-
-    @Override
-    public ObservableList<Person> getFilteredPersonList() {
-        return model.getFilteredPersonList();
     }
 
     @Override
