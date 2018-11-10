@@ -84,12 +84,6 @@ public class ModelManager extends ComponentManager implements Model {
     }
 
     @Override
-    public boolean hasPerson(Person person) {
-        requireNonNull(person);
-        return versionedAddressBook.hasPerson(person);
-    }
-
-    @Override
     public boolean hasEntry(ResumeEntry entry) {
         requireNonNull(entry);
         return versionedEntryBook.hasEntry(entry);
