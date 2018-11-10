@@ -41,17 +41,6 @@ public class EntryInfo {
     }
 
     /**
-     * checks if any of the fields is of invalid format.
-     * @throws IllegalArgumentException with error message MESSAGE_ENTRYINFO_CONSTRAINTS if invalid format is detected.
-     */
-    public void checkArguments(String title, String subtitle, String duration) {
-        checkArgument(isValidEntryInfoField(title), MESSAGE_ENTRYINFO_CONSTRAINTS);
-        checkArgument(isValidEntryInfoField(subtitle), MESSAGE_ENTRYINFO_CONSTRAINTS);
-        checkArgument(isValidEntryInfoField(duration), MESSAGE_ENTRYINFO_CONSTRAINTS);
-
-    }
-
-    /**
      * precond: entryInfo must not contain any null element
      * @param entryInfo list containing title, subHeader, duration. Can be empty
      */
@@ -88,6 +77,18 @@ public class EntryInfo {
     public static boolean isValidEntryInfo(List<String> entryInfo) {
         return entryInfo.stream().allMatch(s -> isValidEntryInfoField(s));
     }
+
+    /**
+     * checks if any of the fields is of invalid format.
+     * @throws IllegalArgumentException with error message MESSAGE_ENTRYINFO_CONSTRAINTS if invalid format is detected.
+     */
+    public void checkArguments(String title, String subtitle, String duration) {
+        checkArgument(isValidEntryInfoField(title), MESSAGE_ENTRYINFO_CONSTRAINTS);
+        checkArgument(isValidEntryInfoField(subtitle), MESSAGE_ENTRYINFO_CONSTRAINTS);
+        checkArgument(isValidEntryInfoField(duration), MESSAGE_ENTRYINFO_CONSTRAINTS);
+
+    }
+
     /**
      * @return Title of the entry.
      */
