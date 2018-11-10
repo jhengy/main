@@ -12,13 +12,11 @@ import seedu.address.logic.commands.Command;
 import seedu.address.logic.commands.ContextCommand;
 import seedu.address.logic.commands.EditEntryInfoCommand;
 import seedu.address.logic.commands.ExitCommand;
-import seedu.address.logic.commands.FindCommand;
 import seedu.address.logic.commands.HelpCommand;
 import seedu.address.logic.commands.LoadTemplateCommand;
 import seedu.address.logic.commands.MakeCommand;
 import seedu.address.logic.commands.SelectEntryCommand;
 import seedu.address.logic.commands.TagCommand;
-import seedu.address.logic.commands.UndoCommand;
 import seedu.address.logic.commands.exceptions.DeleteEntryCommand;
 import seedu.address.logic.parser.exceptions.ParseException;
 
