@@ -34,9 +34,21 @@ public class EntryInfo {
      */
     public EntryInfo(String title, String subheader, String duration) {
         requireAllNonNull(title, subheader, duration);
+        checkArguments(title, subheader, duration);
         entryInfo.add(title);
         entryInfo.add(subheader);
         entryInfo.add(duration);
+    }
+
+    /**
+     * checks if any of the fields is of invalid format.
+     * @throws IllegalArgumentException with error message MESSAGE_ENTRYINFO_CONSTRAINTS if invalid format is detected.
+     */
+    public void checkArguments(String title, String subtitle, String duration) {
+        checkArgument(isValidEntryInfoField(title), MESSAGE_ENTRYINFO_CONSTRAINTS);
+        checkArgument(isValidEntryInfoField(subtitle), MESSAGE_ENTRYINFO_CONSTRAINTS);
+        checkArgument(isValidEntryInfoField(duration), MESSAGE_ENTRYINFO_CONSTRAINTS);
+
     }
 
     /**
