@@ -56,9 +56,6 @@ public class MainWindow extends UiPart<Stage> {
     private MenuItem helpMenuItem;
 
     @FXML
-    private StackPane personListPanelPlaceholder;
-
-    @FXML
     private StackPane entryListPanelPlaceholder;
 
     @FXML
@@ -136,8 +133,6 @@ public class MainWindow extends UiPart<Stage> {
     void fillInnerParts() {
         browserPanel = new BrowserPanel();
         browserPlaceholder.getChildren().add(browserPanel.getRoot());
-
-        personListPanelPlaceholder.getChildren().add(personListPanel.getRoot());
 
         entryListPanel = new EntryListPanel(logic.getFilteredEntryList());
         entryListPanelPlaceholder.getChildren().add(entryListPanel.getRoot());

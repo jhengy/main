@@ -75,6 +75,11 @@ public interface Model {
      */
     void loadTemplate(Path filepath);
 
+	/**
+     * Returns the currently loaded template.
+     */
+	Optional<Template> getLoadedTemplate();
+
     /**
      * Saves the current entry book state for undo/redo.
      */
