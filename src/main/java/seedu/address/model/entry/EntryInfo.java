@@ -1,5 +1,6 @@
 package seedu.address.model.entry;
 
+import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.AppUtil.checkArgument;
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 import static seedu.address.commons.util.StringUtil.isEmptyString;
@@ -103,6 +104,8 @@ public class EntryInfo {
      * set title of the entry
      */
     public void setTitle(String title) {
+        requireNonNull(title);
+        checkArgument(isValidEntryInfoField(title), MESSAGE_ENTRYINFO_CONSTRAINTS);
         entryInfo.set(0, title);
     }
 
@@ -111,6 +114,8 @@ public class EntryInfo {
      * set subHeader of the entry
      */
     public void setSubHeader(String subHeader) {
+        requireNonNull(subHeader);
+        checkArgument(isValidEntryInfoField(subHeader), MESSAGE_ENTRYINFO_CONSTRAINTS);
         entryInfo.set(1, subHeader);
     }
 
@@ -119,6 +124,8 @@ public class EntryInfo {
      * set duration of the entry
      */
     public void setDuration(String duration) {
+        requireNonNull(duration);
+        checkArgument(isValidEntryInfoField(duration), MESSAGE_ENTRYINFO_CONSTRAINTS);
         entryInfo.set(2, duration);
     }
 
