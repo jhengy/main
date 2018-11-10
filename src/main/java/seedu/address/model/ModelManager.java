@@ -207,14 +207,18 @@ public class ModelManager extends ComponentManager implements Model {
 
         // state check
         ModelManager other = (ModelManager) obj;
+
         return versionedEntryBook.equals(other.versionedEntryBook)
                 && filteredEntries.equals(other.filteredEntries)
                 && categoryManager.equals(other.categoryManager)
                 && tagManager.equals(other.tagManager)
-                && (loadedTemplate == other.loadedTemplate
-                        || loadedTemplate.equals(other.loadedTemplate))
                 && awareness.equals(other.awareness)
-                && lastGeneratedResume.equals(other.lastGeneratedResume);
+                && nullCheck(loadedTemplate, other.loadedTemplate)
+                && nullCheck(lastGeneratedResume, other.lastGeneratedResume);
+    }
+
+    private boolean nullCheck(Object a, Object b) {
+        return (a == b || a.equals(b));
     }
 
     //=========== Resume generation =======================================================================
