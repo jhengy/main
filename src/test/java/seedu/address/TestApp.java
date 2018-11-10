@@ -41,12 +41,6 @@ public class TestApp extends MainApp {
         super();
         this.initialDataSupplier = initialDataSupplier;
         this.saveFileLocation = saveFileLocation;
-
-        // If some initial local data has been provided, write those to the file
-        if (initialDataSupplier.get() != null) {
-            createDataFileWithData(new XmlSerializableAddressBook(this.initialDataSupplier.get()),
-                    this.saveFileLocation);
-        }
     }
 
     @Override
@@ -71,7 +65,7 @@ public class TestApp extends MainApp {
      * Returns the file path of the storage file.
      */
     public Path getStorageSaveLocation() {
-        return storage.getEntryBookFilePath();
+        return storage.getUserPrefsFilePath();
     }
 
     /**
