@@ -56,8 +56,8 @@ public class CommandParserTest {
     @Test
     public void parseCommand_addBullet() throws Exception {
         AddBulletCommand command = (AddBulletCommand) parser.parseCommand(AddBulletCommand.COMMAND_WORD + " "
-                + INDEX_FIRST_PERSON.getOneBased() + " " + "test bullet");
-        assertEquals(new AddBulletCommand(INDEX_FIRST_PERSON, "test bullet"), command);
+                + INDEX_FIRST_ENTRY.getOneBased() + " " + "test bullet");
+        assertEquals(new AddBulletCommand(INDEX_FIRST_ENTRY, "test bullet"), command);
     }
 
     @Test

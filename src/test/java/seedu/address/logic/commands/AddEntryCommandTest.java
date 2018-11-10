@@ -19,18 +19,14 @@ import org.junit.rules.ExpectedException;
 import javafx.collections.ObservableList;
 import seedu.address.logic.CommandHistory;
 import seedu.address.logic.commands.exceptions.CommandException;
-import seedu.address.model.AddressBook;
 import seedu.address.model.EntryBook;
 import seedu.address.model.Model;
-import seedu.address.model.ReadOnlyAddressBook;
 import seedu.address.model.ReadOnlyEntryBook;
 import seedu.address.model.UserParticulars;
 import seedu.address.model.entry.ResumeEntry;
-import seedu.address.model.person.Person;
 import seedu.address.model.resume.Resume;
 import seedu.address.model.template.Template;
 import seedu.address.model.util.EntryBuilder;
-import seedu.address.testutil.PersonBuilder;
 
 public class AddEntryCommandTest {
     private static final CommandHistory EMPTY_COMMAND_HISTORY = new CommandHistory();
@@ -72,7 +68,6 @@ public class AddEntryCommandTest {
 
     @Test
     public void equals() {
-        Person alice = new PersonBuilder().withName("Alice").build();
         ResumeEntry sourceAcademy = new EntryBuilder().withTitle("SOURCE ACADEMY").build();
         ResumeEntry facebook = new EntryBuilder().withTitle("Facebook").build();
 
