@@ -16,7 +16,6 @@ import seedu.address.commons.core.Messages;
 import seedu.address.commons.core.index.Index;
 import seedu.address.logic.CommandHistory;
 import seedu.address.logic.commands.EditEntryInfoCommand.EditEntryInfoDescriptor;
-import seedu.address.model.AddressBook;
 import seedu.address.model.EntryBook;
 import seedu.address.model.Model;
 import seedu.address.model.ModelManager;
@@ -94,7 +93,7 @@ public class EditEntryInfoCommandTest {
         assertFalse(standardCommand.equals(null));
 
         // different types -> returns false
-        assertFalse(standardCommand.equals(new ClearCommand()));
+        assertFalse(standardCommand.equals(new HelpCommand()));
 
         // different index -> returns false
         assertFalse(standardCommand.equals(new EditEntryInfoCommand(INDEX_SECOND_ENTRY, descriptor)));

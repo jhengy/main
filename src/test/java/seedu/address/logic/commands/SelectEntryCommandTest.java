@@ -28,10 +28,8 @@ public class SelectEntryCommandTest {
     @Rule
     public final EventsCollectorRule eventsCollectorRule = new EventsCollectorRule();
 
-    private Model model = new ModelManager(getTypicalAddressBook(),
-            getTypicalEntryBook(), new UserPrefs(), new Awareness());
-    private Model expectedModel = new ModelManager(getTypicalAddressBook(),
-            getTypicalEntryBook(), new UserPrefs(), new Awareness());
+    private Model model = new ModelManager(getTypicalEntryBook(), new UserPrefs(), new Awareness());
+    private Model expectedModel = new ModelManager(getTypicalEntryBook(), new UserPrefs(), new Awareness());
     private CommandHistory commandHistory = new CommandHistory();
 
     @Test
