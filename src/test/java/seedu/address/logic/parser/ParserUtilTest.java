@@ -19,7 +19,6 @@ import seedu.address.logic.parser.exceptions.ParseException;
 import seedu.address.model.category.Category;
 import seedu.address.model.entry.EntryInfo;
 import seedu.address.model.tag.Tag;
-import seedu.address.testutil.Assert;
 
 public class ParserUtilTest {
     private static final String INVALID_TAG = "#friend";

@@ -1,22 +1,17 @@
 package seedu.address.commons.util;
 
-import static org.junit.Assert.assertEquals;
-
 import java.io.FileNotFoundException;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.Collections;
-import java.util.List;
 
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.annotation.XmlRootElement;
 
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
 
 import seedu.address.model.EntryBook;
-import seedu.address.testutil.TestUtil;
 
 public class XmlUtilTest {
     private static final Path TEST_DATA_FOLDER = Paths.get("src", "test", "data", "XmlUtilTest");

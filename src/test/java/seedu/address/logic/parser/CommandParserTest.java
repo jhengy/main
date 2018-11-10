@@ -10,10 +10,6 @@ import static seedu.address.logic.commands.CommandTestUtil.TITLE_DESC_FACEBOOK;
 import static seedu.address.testutil.TypicalEntrys.WORK_FACEBOOK;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_ENTRY;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
