@@ -53,7 +53,7 @@ public class EntryDescription {
      * checks if a bullet is contained in the EntryDescription.
      */
     public boolean contains(String bullet) {
-        return descriptionList.stream().anyMatch(s -> s.equals(bullet));
+        return descriptionList.contains(bullet);
     }
 
     /**
