@@ -28,7 +28,7 @@ public class AddBulletCommand extends Command {
             + "attained Best Financial Hack Award";
 
     public static final String MESSAGE_ADDBULLET_SUCCESS = "Added Bullet : %1$s";
-    public static final String MESSAGE_ADDBULLET_DUPLICATE_BULLET = "The bullet to add already exists";
+    public static final String MESSAGE_ADDBULLET_DUPLICATE_BULLET = "This bullet already exists";
     public static final String MESSAGE_NOT_EDITED = "At least one field to edit must be provided.";
 
     private final Index index;
