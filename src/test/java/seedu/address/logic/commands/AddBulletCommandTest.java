@@ -40,7 +40,7 @@ public class AddBulletCommandTest {
      */
     private EntryBook getEntrybookWithDescription() {
         EntryBook entryBook = new EntryBook();
-        entryBook.addEnty(WORK_FACEBOOK_WITH_DESC);
+        entryBook.addEntry(WORK_FACEBOOK_WITH_DESC);
         return entryBook;
     }
 
