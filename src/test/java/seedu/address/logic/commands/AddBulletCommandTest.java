@@ -31,6 +31,10 @@ import seedu.address.model.util.EntryBuilder;
 
 public class AddBulletCommandTest {
 
+    private Model model = new ModelManager(getTypicalAddressBook(), getTypicalEntryBook(), new UserPrefs(),
+                                                   new Awareness());
+    private CommandHistory commandHistory = new CommandHistory();
+
     /**
      * Get an entry book with one typical entry with description.
      */
@@ -39,10 +43,6 @@ public class AddBulletCommandTest {
         entryBook.addEnty(WORK_FACEBOOK_WITH_DESC);
         return entryBook;
     }
-
-    private Model model = new ModelManager(getTypicalAddressBook(), getTypicalEntryBook(), new UserPrefs(),
-                                                   new Awareness());
-    private CommandHistory commandHistory = new CommandHistory();
 
     @Test
     public void execute_allFieldsSpecifiedUnfilteredList_success() {
@@ -81,7 +81,7 @@ public class AddBulletCommandTest {
         String duplicateBullet = FINANCIAL_HACK_AWARD;
         AddBulletCommand addBulletCommand = new AddBulletCommand(index, duplicateBullet);
 
-        assertCommandFailure(addBulletCommand,modelTemp,commandHistory,MESSAGE_ADDBULLET_DUPLICATE_BULLET);
+        assertCommandFailure(addBulletCommand, modelTemp, commandHistory, MESSAGE_ADDBULLET_DUPLICATE_BULLET);
     }
 
 
