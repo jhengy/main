@@ -4,10 +4,12 @@ import java.nio.file.Path;
 
 import javafx.stage.Screen;
 import javafx.stage.Stage;
+
 import seedu.address.commons.core.Config;
 import seedu.address.commons.core.GuiSettings;
 import seedu.address.commons.util.FileUtil;
 import seedu.address.commons.util.XmlUtil;
+
 import seedu.address.model.Model;
 import seedu.address.model.ModelManager;
 import seedu.address.model.UserPrefs;
@@ -58,7 +60,14 @@ public class TestApp extends MainApp {
      * Returns the file path of the storage file.
      */
     public Path getStorageSaveLocation() {
-        return storage.getUserPrefsFilePath();
+        try {
+            // TODO: read actual storage.getEntryBookFilePath when storage is done
+            return storage.readUserPrefs().get().getEntryBookFilePath();
+        } catch (Exception e) {
+            // TODO: shouldnt run in our test cases, backup, remove after entrybook storage done
+            System.out.println("oh no, something wrong here");
+            return storage.getUserPrefsFilePath();
+        }
     }
 
     /**

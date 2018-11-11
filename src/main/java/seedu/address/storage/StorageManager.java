@@ -32,7 +32,6 @@ public class StorageManager extends ComponentManager implements Storage {
     private TemplateStorage templateStorage;
     private ResumeStorage resumeStorage;
 
-
     public StorageManager(UserPrefsStorage userPrefsStorage) {
         super();
         this.userPrefsStorage = userPrefsStorage;
