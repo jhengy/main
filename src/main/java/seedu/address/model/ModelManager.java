@@ -108,7 +108,6 @@ public class ModelManager extends ComponentManager implements Model {
     }
 
     @Override
-    // to be modified
     public boolean hasEntry(ResumeEntry entry) {
         requireNonNull(entry);
         return versionedEntryBook.hasEntry(entry);
