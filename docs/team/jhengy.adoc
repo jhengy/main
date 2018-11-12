@@ -8,11 +8,9 @@
 ---
 
 == Overview
-This document showcases my contributions to a team project consisting of five team members. It is done in a semester long (13 weeks) NUS module CS2103T.
+This document showcases my contributions to a team project consisting of five team members. It is done in a semester long (13 weeks) NUS module CS2103T.Thanks to the help from my other four team members. Please refer to https://github.com/CS2103-AY1819S1-W17-1/main/blob/master/docs/AboutUs.adoc[AboutUs] page for more details of the team.
 
 ResuMaker is a fast, flexible and customizable resume generator aimed at computer science professionals. On top of the Command Line Interface where most of the user interaction take place, it also provides users with an intuitive and user friendly Graphic User Interface. +
-
-
 
 
 == Summary of Contributions
