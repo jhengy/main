@@ -51,7 +51,7 @@ when a set of commands is executed by an user._
 image::FlowDiagramForEntryManagement.png[width="800"]
 
 
-+|===
+|===
 |_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._
 |===
 
