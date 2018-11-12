@@ -176,6 +176,7 @@ Deletes the 2nd entry in ResuMaker.
 `deleteEntry 1` +
 Deletes the 1st entry displayed under education category.
 
+//end::hengyuanUG[]
 
 === Editing a bullet point: `editBullet` [Coming in v2.0]
 
@@ -222,7 +223,7 @@ Deletes the 1st bullet of the 2nd entry in ResuMaker.
 `deleteBullet 1 1` +
 Deletes the 1st bullet of the 1st entry displayed under education category of ResuMaker.
 
-//end::hengyuanUG[]
+
 // tag::anubhavUG[]
 === Creating a Contextual Event (Project / Work Experience / Skill): `nus`
 There are times when we just don't want to manually enter every piece of required information into a computer programme.
