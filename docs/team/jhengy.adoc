@@ -2,8 +2,9 @@
 :site-section: AboutUs
 :imagesDir: ../images
 :stylesDir: ../stylesheets
+:sectnums:
 
-== PROJECT: ResuMaker
+= PROJECT: ResuMaker
 
 ---
 
