@@ -109,7 +109,7 @@ Format: `addBullet ENTRYINDEX CONTENTTOADD`
 * `CONTENTTOADD` refers to a line of description that the user wants to add to an entry
 ****
 
-Example:
+Examples:
 
 * `tag ls` +
 `addBullet 1 attained Best Financial Hack Award` +
