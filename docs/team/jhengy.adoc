@@ -47,10 +47,10 @@ https://github.com/CS2103-AY1819S1-W17-1/main/pull/205[PR#205]
 |_ Given below is the flow chart of the appearance of the Graphic User Interface
 when a set of commands is executed by an user._
 |===
-.Flow diagram of a typical scenario for the list of commands+
+.Flow diagram of a typical scenario for the list of commands executed.
 image::FlowDiagramForEntryManagement.png[width="800"]
 
-
+{nbsp} +
 |===
 |_Given below are sections I contributed to the User Guide. They showcase my ability to write documentation targeting end-users._
 |===
