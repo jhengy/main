@@ -11,7 +11,7 @@
 
 ResuMaker is a fast, flexible and customizable resume generator aimed at computer science professionals. On top of the Command Line Interface where most of the user interaction take place, it also provides users with an intuitive and user friendly Graphic User Interface.
 
-== Summary of contributions
+== Summary of Contributions
 
 * *Major enhancement*: Responsive Display of Expanded Entry
 ** What it does: It allows for the responsive display of the bullet description of an entry whenever a user edits the description of that particular entry.
