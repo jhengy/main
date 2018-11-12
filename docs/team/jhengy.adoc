@@ -26,20 +26,20 @@ ResuMaker is a fast, flexible and customizable resume generator aimed at compute
 
 * *Other contributions*:
 ** Morphing of AddressBook 4 to ResuMaker:
-*** Set up of Model Component Class Structure for ResumeEntry. See https://github.com/CS2103-AY1819S1-W17-1/main/pull/48/files[PR#48] https://github.com/CS2103-AY1819S1-W17-1/main/pull/114/files[PR#114].
-*** Morph existing commands to align with new Model. See https://github.com/CS2103-AY1819S1-W17-1/main/pull/165[PR#165],
+*** Set up Model Component Class Structure for ResumeEntry. See https://github.com/CS2103-AY1819S1-W17-1/main/pull/48/files[PR#48] https://github.com/CS2103-AY1819S1-W17-1/main/pull/114/files[PR#114].
+*** Morphed existing commands to align with new Model. See https://github.com/CS2103-AY1819S1-W17-1/main/pull/165[PR#165],
 https://github.com/CS2103-AY1819S1-W17-1/main/pull/178[PR#178],
 https://github.com/CS2103-AY1819S1-W17-1/main/pull/200[PR#200]
 *** Set up display of entries in UI. See https://github.com/CS2103-AY1819S1-W17-1/main/pull/178[PR#178]
 
 ** Test Handling:
-*** Addition of utility class such as EntryBuilder to facilitate unit testing of Model related classes
+*** Added utility class such as EntryBuilder to facilitate unit testing of Model related classes
 
 ** Documentation:
 *** Modified Command Format section under the feature section of the User Guide
 
 ** Community:
-*** PRs reviewed (with non-trivial review comments): https://github.com/CS2103-AY1819S1-W17-1/main/pull/179[PR#179],
+*** Reviewed PRs (with non-trivial review comments): https://github.com/CS2103-AY1819S1-W17-1/main/pull/179[PR#179],
 https://github.com/CS2103-AY1819S1-W17-1/main/pull/205[PR#205]
 
 == Contributions to the User Guide
